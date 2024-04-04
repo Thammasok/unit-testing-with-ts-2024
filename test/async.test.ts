@@ -2,7 +2,7 @@ import { fetchData, fetchDataWithCallback } from '../src/async'
 
 // 1.1 Promise resolves
 test('the data is peanut butter', async () => {
-  return fetchData().then((data) => {
+  return fetchData(true).then((data) => {
     expect(data).toBe('peanut butter')
   })
 })
