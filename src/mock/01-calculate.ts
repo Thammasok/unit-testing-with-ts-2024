@@ -1,4 +1,4 @@
-import { add } from './math'
+import { add } from '../math'
 
 export const doubleSum = (x: number, y: number): number => {
   const sum = add(x, y)
