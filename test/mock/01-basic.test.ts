@@ -1,16 +1,15 @@
 import { doubleSum } from '../../src/mock/01-calculate'
 
-// 2. solution 2
-import * as math from '../../src/math'
-
 // 1. solution 1
-describe('Basic Mock solution 1', () => {
-  beforeEach(() => {
-    jest.mock('../../src/math', () => ({
-      add: jest.fn(() => 20)
-    }))
-  })
+jest.mock('../../src/math', () => ({
+  add: jest.fn((x, y) => {
+    if (x === 1 && y === 2) return 20
 
+    return x + y
+  })
+}))
+
+describe('Basic Mock solution 1', () => {
   afterEach(() => {
     jest.restoreAllMocks()
   })
@@ -25,22 +24,51 @@ describe('Basic Mock solution 1', () => {
 
     expect(result).toBe(expected)
   })
-})
 
-describe('Basic Mock solution 2', () => {
-  it('should return 20 when call doubleSum and send 1 and 2', () => {
-    // Arrange
-    const numberOne = 1
+  test('should return 23 when call doubleSum and send 10 and 2', () => {
+    const numberOne = 10
     const numberTwo = 2
-    const expected = 23
+    const expected = 24
 
-    const addMock = math.add as jest.Mock
+    const result = doubleSum(numberOne, numberTwo)
 
-    addMock.mockReturnValue(17)
-
-    const total = doubleSum(numberOne, numberTwo)
-
-    expect(addMock).toHaveBeenCalled()
-    expect(total).toBe(expected)
+    expect(result).toBe(expected)
   })
 })
+
+// 2. solution 2
+// import * as math from '../../src/math'
+
+// describe('Basic Mock solution 2', () => {
+//   it('should return 20 when call doubleSum and send 1 and 2', () => {
+//     // Arrange
+//     const numberOne = 1
+//     const numberTwo = 2
+//     const expected = 20
+
+//     const addMock = math.add as jest.Mock
+
+//     addMock.mockReturnValue(17)
+
+//     const total = doubleSum(numberOne, numberTwo)
+
+//     expect(addMock).toHaveBeenCalled()
+//     expect(total).toBe(expected)
+//   })
+
+//   it('should return 110 when call doubleSum and send 1 and 2', () => {
+//     // Arrange
+//     const numberOne = 99
+//     const numberTwo = 1
+//     const expected = 10
+
+//     const addMock = math.add as jest.Mock
+
+//     addMock.mockReturnValue(17)
+
+//     const total = doubleSum(numberOne, numberTwo)
+
+//     expect(addMock).toHaveBeenCalled()
+//     expect(total).toBe(expected)
+//   })
+// })
