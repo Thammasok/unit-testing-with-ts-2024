@@ -2,7 +2,7 @@
 import { doubleSum } from '../../../src/function/mock/01-calculate'
 import * as math from '../../../src/function/math'
 
-jest.mock('../../src/function/math')
+jest.mock('../../../src/function/math')
 
 describe('Basic Mock solution 2', () => {
   it('should return 20 when call doubleSum and send 1 and 2', () => {

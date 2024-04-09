@@ -2,7 +2,7 @@
 import { doubleSum } from '../../../src/function/mock/01-calculate'
 
 // Implement in Mock
-jest.mock('../../src/function/math', () => ({
+jest.mock('../../../src/function/math', () => ({
   add: jest.fn((x, y) => {
     if (x === 1 && y === 2) return 20
 
