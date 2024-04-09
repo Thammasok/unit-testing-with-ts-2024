@@ -1,4 +1,4 @@
-import { fetchDataWithCallback } from '../../src/function/async'
+import { fetchDataWithCallback } from '../../../src/function/async'
 
 // 3. Callback
 test('the data is peanut butter', (done) => {

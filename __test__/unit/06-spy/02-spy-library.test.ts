@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { getUserByUserName } from '../../src/function/mock/02-user'
+import { getUserByUserName } from '../../../src/function/mock/02-user'
 
 describe('Spy library', () => {
   it('Should be called from findIndex with spy', () => {

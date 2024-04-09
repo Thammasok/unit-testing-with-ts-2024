@@ -1,4 +1,4 @@
-import { fetchData } from '../../src/function/async'
+import { fetchData } from '../../../src/function/async'
 
 // 1.1 Promise resolves
 test('the data is peanut butter', async () => {

@@ -1,6 +1,6 @@
 // solution 2
-import { doubleSum } from '../../src/function/mock/01-calculate'
-import * as math from '../../src/function/math'
+import { doubleSum } from '../../../src/function/mock/01-calculate'
+import * as math from '../../../src/function/math'
 
 jest.mock('../../src/function/math')
 

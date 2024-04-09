@@ -1,4 +1,4 @@
-import { add } from '../../src/function/math'
+import { add } from '../../../src/function/math'
 
 it('message', () => {
   // Arrange

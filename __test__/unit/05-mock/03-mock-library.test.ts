@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { getUserByUserName } from '../../src/function/mock/02-user'
+import { getUserByUserName } from '../../../src/function/mock/02-user'
 
 // Normal without mock will throw error
 // jest.mock('lodash')

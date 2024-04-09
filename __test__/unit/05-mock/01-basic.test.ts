@@ -1,5 +1,5 @@
 // solution 1
-import { doubleSum } from '../../src/function/mock/01-calculate'
+import { doubleSum } from '../../../src/function/mock/01-calculate'
 
 // Implement in Mock
 jest.mock('../../src/function/math', () => ({
