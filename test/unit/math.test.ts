@@ -1,4 +1,4 @@
-import { add } from '../src/math'
+import { add } from '../../src/basic/math'
 
 describe('Math function', () => {
   it('should add 5 by 3', () => {

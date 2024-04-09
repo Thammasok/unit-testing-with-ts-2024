@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import { getUser } from '../../src/mock'
+import { getUserByUserName } from '../../../src/basic/mock/02-user'
 
 describe('Spy library', () => {
   it('Should be called from findIndex with spy', () => {
@@ -7,7 +7,7 @@ describe('Spy library', () => {
 
     const findIndexSpy = jest.spyOn(_, 'findIndex').mockReturnValue(2)
 
-    getUser(keyword)
+    getUserByUserName(keyword)
 
     expect(findIndexSpy).toHaveBeenCalled()
   })
@@ -17,7 +17,7 @@ describe('Spy library', () => {
 
     jest.spyOn(_, 'findIndex').mockReturnValue(2)
 
-    const actual = getUser(keyword)
+    const actual = getUserByUserName(keyword)
 
     // expect(findIndexSpy).toHaveBeenCalled()
     expect(actual).toMatchObject({

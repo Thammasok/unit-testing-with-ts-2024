@@ -1,7 +1,7 @@
-import { doubleSum } from '../../src/mock/01-calculate'
+import { doubleSum } from '../../../src/basic/mock/01-calculate'
 
 // 1. solution 1
-jest.mock('../../src/math', () => ({
+jest.mock('../../../src/basic/math', () => ({
   add: jest.fn((x, y) => {
     if (x === 1 && y === 2) return 20
 

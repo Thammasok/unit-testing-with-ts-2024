@@ -1,5 +1,5 @@
-import { doubleSum } from '../../src/mock/01-calculate'
-import * as math from '../../src/math'
+import { doubleSum } from '../../../src/basic/mock/01-calculate'
+import * as math from '../../../src/basic/math'
 
 describe('mock', () => {
   afterEach(() => {
