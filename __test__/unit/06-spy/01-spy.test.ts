@@ -1,7 +1,7 @@
 import { doubleSum } from '../../../src/function/mock/01-calculate'
 import * as math from '../../../src/function/math'
 
-describe('mock', () => {
+describe('spy', () => {
   afterEach(() => {
     // restore the spy created with spyOn
     jest.restoreAllMocks()
